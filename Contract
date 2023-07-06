@@ -15,7 +15,6 @@ access(all) contract SomeContract {
 
         access(self) var d: String
 
-
         //
         // 3 Functions
         //
@@ -24,7 +23,7 @@ access(all) contract SomeContract {
 
         access(contract) fun contractFunc() {}
 
-        access(self) fun privateFunc() {}
+        access(self) fun selfFunc() {}
 
 
         pub fun structFunc() {
@@ -32,18 +31,27 @@ access(all) contract SomeContract {
             /*** AREA 1 ***/
             /**************/
 
-          SomeContract.testStruct.a="10"
-  let variableA = SomeContract.testStruct.a
+            //pub(set)
+            //
+            SomeContract.testStruct.a="10"
+            let variableA = SomeContract.testStruct.a
 
-  let variableB = SomeContract.testStruct.b
- // SomeContract.testStruct.b="10"
+            //pub
+            //
+            SomeContract.testStruct.b="10"
+            let variableB = SomeContract.testStruct.b
 
- // let variableC = SomeContract.testStruct.c
- // SomeContract.testStruct.c="10"
+            //access(contract)
+            //
+            SomeContract.testStruct.c="10"
+            let variableC = SomeContract.testStruct.c
 
-  //let variableD = SomeContract.testStruct.d
-  //SomeContract.testStruct.d="10"
-  
+            //access(self)
+            //
+            SomeContract.testStruct.d="10"
+            let variableD = SomeContract.testStruct.d
+
+
         }
 
         init() {
@@ -62,17 +70,27 @@ access(all) contract SomeContract {
             /*** AREA 2 ***/
             /**************/
 
-            SomeContract.testStruct.a="10"
-  let variableA = SomeContract.testStruct.a
 
-  let variableB = SomeContract.testStruct.b
- // SomeContract.testStruct.b="10"
+              //pub(set)
+              //
+              SomeContract.testStruct.a="10"
+              let variableA = SomeContract.testStruct.a
+              
+              //pub
+              //
+              //SomeContract.testStruct.b="10"
+              let variableB = SomeContract.testStruct.b
+              
 
- // let variableC = SomeContract.testStruct.c
- // SomeContract.testStruct.c="10"
+              //access(contract)
+              //
+               //SomeContract.testStruct.c="10"
+              let variableC = SomeContract.testStruct.c
+              
 
-  //let variableD = SomeContract.testStruct.d
-  //SomeContract.testStruct.d="10"
+              //access(self)
+              //SomeContract.testStruct.d="10"
+              //let variableD = SomeContract.testStruct.d
 
         }
 
@@ -91,17 +109,27 @@ access(all) contract SomeContract {
         /**************/
 
 
-        SomeContract.testStruct.a="10"
-  let variableA = SomeContract.testStruct.a
+            //pub(set)
+            //
+            SomeContract.testStruct.a="10"
+            let variableA = SomeContract.testStruct.a
 
-  let variableB = SomeContract.testStruct.b
- // SomeContract.testStruct.b="10"
+            //pub
+            //
+            // SomeContract.testStruct.b="10"
+            let variableB = SomeContract.testStruct.b
 
- // let variableC = SomeContract.testStruct.c
- // SomeContract.testStruct.c="10"
 
-  //let variableD = SomeContract.testStruct.d
-  //SomeContract.testStruct.d="10"
+            //access(contract)
+            //
+             //SomeContract.testStruct.c="10"
+            let variableC = SomeContract.testStruct.c
+            
+
+            //access(self)
+            //
+            //SomeContract.testStruct.d="10"
+            //let variableD = SomeContract.testStruct.d
 
     }
 
