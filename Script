@@ -4,19 +4,31 @@ pub fun main() {
   /**************/
   /*** AREA 4 ***/
   /**************/
+  //pub(set)
 
   SomeContract.testStruct.a="10"
   let variableA = SomeContract.testStruct.a
 
+
+//pub
+
   let variableB = SomeContract.testStruct.b
   //SomeContract.testStruct.b="10"
+
+
+//access(contract)
 
  // let variableC = SomeContract.testStruct.c
  // SomeContract.testStruct.c="10"
 
+
+//access(self)
+
   //let variableD = SomeContract.testStruct.d
   //SomeContract.testStruct.d="10"
 
+
+//function
   SomeContract.testStruct.publicFunc()
   // SomeContract.testStruct.contractFunc()
 //    SomeContract.testStruct.privateFunc()
