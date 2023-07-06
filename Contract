@@ -95,7 +95,7 @@ access(all) contract SomeContract {
         }
 
         init() {
-            self.e = 17
+            self.e = 10
         }
     }
 
